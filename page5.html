@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UIF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section>
+        <nav>
+            <div class="logo">
+                <img src="New folder/LOGO1.png">
+            </div>
+            <a href="index1.html">Home<span></span></a>
+            <a href="#About">About<span></span></a>
+            <a href="page2.html">Menu<span></span></a>
+            <a href="page3.html">Gallary<span></span></a>
+            <a href="page4.html">Review<span></span></a>
+            <a href="page5.html">Order<span></span></a>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </nav>
+    </section>
+
+    <!--Order-->
+
+    <div class="order">
+        <section>
+            <div class="wrapper">
+                <form action="#">
+                    <h1>Order</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Your name" required>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" placeholder="Your Address" required>
+
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" placeholder="Mobile Number" required>
+
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">Remeber me!</label>
+                    </div>
+
+
+                    <SELECT NAME="MNU" id="mnu" onclick="SUBMENU()">
+                        <OPTION>SANDWICHES</OPTION>
+                        <OPTION>PASTA</OPTION>
+                        <OPTION>PIZZA</OPTION>
+                        <OPTION>BURGER</OPTION>
+                        <OPTION>ICE-CREAM</OPTION>
+                        <OPTION>CUP-CAKE</OPTION>
+                        <OPTION>SOFTY</OPTION>
+                        <OPTION>CAKE</OPTION>
+                        <OPTION>GARLIC-BREAD</OPTION>
+                        <OPTION>INDIAN-FOOD</OPTION>
+                        <OPTION>SOFT-DRINK</OPTION>
+                        <OPTION>MILK-SHAKE</OPTION>
+                    </SELECT>
+
+                    <select name="sub" id="sub">
+                        <OPTION>Maxicun Snadwiches</OPTION>
+                        <OPTION>Mayonize Sandwiches</OPTION>
+                        <OPTION>Simple Sandwiches</OPTION>
+                    </select></br>
+
+                    <script lang="JavaScript">
+                        function SUBMENU() {
+                            var selectMenu = document.getElementById("mnu").value;
+                            //alert(selectMenu);
+
+                            var subMenu = document.getElementById("sub");
+
+                            var length = subMenu.options.length;
+                            for (i = length - 1; i >= 0; i--) {
+                                subMenu.options[i] = null;
+                            }
+
+                            if (selectMenu == "SANDWICHES") {
+                                //alert("Sandwitches Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Maxicun Snadwiches", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Mayonize Sandwiches", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Simple Sandwiches", 2);
+
+                            }
+                            else if (selectMenu == "PASTA") {
+                                //alert("PASTA Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Whitesos Pasta", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Redsos Pasta", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Macaroni cheese Pasta", 2);
+                            }
+                            else if (selectMenu == "PIZZA") {
+                                //alert("PIZZA Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Maxicun Pizza", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Italian Pizza", 1);
+                                subMenu.options[subMenu.options.length] = new Option("7cheese Pizza", 2);
+                            }
+                            else if (selectMenu == "BURGER") {
+                                //alert("BURGER Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Aloo tikki", 0);
+                                subMenu.options[subMenu.options.length] = new Option("cheese aloo tikki", 1);
+                                subMenu.options[subMenu.options.length] = new Option("double cheese aloo tikki", 2);
+                            }
+                            else if (selectMenu == "ICE-CREAM") {
+                                //alert("ICE-CREAM Selected");
+                                subMenu.options[subMenu.options.length] = new Option("chocolate", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Strawberry", 1);
+                                subMenu.options[subMenu.options.length] = new Option("American Nuts", 2);
+                            }
+                            else if (selectMenu == "CUP-CAKE") {
+                                //alert("CUP-CAKE Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Cheese cupcake", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Chocolate cupcake", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Red velvet cupcake", 2);
+                            }
+                            else if (selectMenu == "SOFTY") {
+                                //alert("SOFTY Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Strawberry softy", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Black current Softy", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Blue berry bins Softy", 2);
+                            }
+                            else if (selectMenu == "CAKE") {
+                                //alert("CAKE Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Black forest cake", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Kit-kat cake", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Red velvet cake", 2);
+                            }
+                            else if (selectMenu == "GARLIC-BREAD") {
+                                //alert("GARLIC-BREAD Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Cheese Garlic Bread", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Peri peri cheese Garlic Bread", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Cheese chilli Garlic Bread", 2);
+                            }
+                            else if (selectMenu == "INDIAN-FOOD") {
+                                //alert("INDIAN-FOOD Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Kathiyawadi", 0);
+                                subMenu.options[subMenu.options.length] = new Option("South Indian", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Punjabi", 2);
+                            }
+                            else if (selectMenu == "SOFT-DRINK") {
+                                //alert("SOFT-DRINK Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Mint Mojito", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Blue Lemon", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Mix Flavors", 2);
+                            }
+                            else if (selectMenu == "MILK-SHAKE") {
+                                //alert("MILK-SHAKE Selected");
+                                subMenu.options[subMenu.options.length] = new Option("Butter Scotch Milk shake", 0);
+                                subMenu.options[subMenu.options.length] = new Option("Oreo Milk shake", 1);
+                                subMenu.options[subMenu.options.length] = new Option("Cold Coffie Milk shake", 2);
+                            }
+                        }
+
+                    </script>
+
+                    </br>
+                    <button type="submit" class="btn">Submit</button>
+                    <div class="register-link">
+                        <p>Don't have an account?
+                            <a href="#">Register</a>
+                        </p>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+        </section>
+
+</body>
+
+</html>
